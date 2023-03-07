@@ -5,7 +5,6 @@ const contactsPath = path.resolve("./db/contacts.json");
 
 async function listContacts() {
   const contactsList = await fs.readFile(contactsPath);
-  //   console.log(JSON.parse(contactsList));
   return JSON.parse(contactsList);
 }
 
@@ -29,7 +28,7 @@ async function removeContact(contactId) {
 async function addContact(name, email, phone) {
   const contactsList = await listContacts();
   const newContact = {
-    id: Number(contactsList[contactsList.length - 1].id) + 1,
+    id: String(Number(contactsList[contactsList.length - 1].id) + 1),
     name,
     email,
     phone,

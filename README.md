@@ -1,1 +1,1 @@
-# goit-node-homework-01
+"./AllScreanShots.PNG"
